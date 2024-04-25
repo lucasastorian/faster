@@ -1,6 +1,6 @@
-<h1 class="text-4xl">Faster.chat - Open Source Chat  🚀📝</h1>
+# Faster.chat - Open Source Chat UI  🚀📝
 
-<p></p><p>Tired of waiting on slow chat completions? [Faster.chat](https://faster.chat) is an open-source, blazingly fast chat UI powered by [Groq](https://www.groq.com/) and [Llama 3](https://ai.meta.com/blog/meta-llama-3/).  </p><p></p>
+Tired of waiting on slow chat completions? [Faster.chat](https://faster.chat) is an open-source, blazingly fast chat UI powered by [Groq](https://www.groq.com/) and [Llama 3](https://ai.meta.com/blog/meta-llama-3/).
 
 <img src="demo_image.png" alt="Faster.chat">
 
