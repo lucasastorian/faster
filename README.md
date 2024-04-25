@@ -2,7 +2,8 @@
 
 Tired of waiting on slow chat completions? [Faster.chat](https://faster.chat) is an open-source, blazingly fast chat UI powered by [Groq](https://www.groq.com/) and [Llama 3](https://ai.meta.com/blog/meta-llama-3/).
 
-[![Video Demo](demo_image.png)](https://youtu.be/pcnilRMl-OQ "Demo")
+<!-- [![Video Demo](demo_image.png)]( "Demo") -->
+https://youtu.be/pcnilRMl-OQ
 
 ## 🌟 Features
 
