@@ -5,7 +5,12 @@
   "projects": {
     "faster": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "none",
+          "changeDetection": "OnPush"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -91,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "df50b9e4-350f-4a85-9bda-44f9529e9cd4"
   }
 }

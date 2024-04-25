@@ -1,0 +1,42 @@
+<div class="group flex items-start w-full min-w-[20rem] sm:min-w-[48rem] sm:max-w-[48rem] mt-4" *ngIf="message" @fadeIn>
+    <div class="relative flex flex-col w-full leading-1.5 p-4 rounded-xl"
+        [ngClass]="message.role == 'User' ? 'border-gray-600 bg-gray-100' : 'border-blue-600 bg-blue-100'">
+        <p class="text-base font-normal text-gray-900">
+            <markdown class="markdown prose w-full break-words" [data]="message.content" [disableSanitizer]="true"
+                *ngIf="message.role == 'Assistant'" (click)="handleButtonClick($event)">
+            </markdown>
+        </p>
+
+        <p
+            class="text-base font-normal text-gray-900 whitespace-pre-wrap inline-block max-w-full overflow-wrap break-words">
+
+            <span *ngIf="message.role == 'User'">{{message.content }}</span>
+        </p>
+
+        <div class="absolute bottom-3 right-5 flex justify-end space-x-3 hidden group-hover:block" @fadeIn>
+            <button tp="Regenerate" *ngIf="terminal && message.role == 'Assistant'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                    class="w-3 h-3 text-gray-600">
+                    <path fill-rule="evenodd"
+                        d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            <button tp="Copy" [cdkCopyToClipboard]="message.content" (click)="onCopy()" *ngIf="message.content">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                    class="w-3 h-3 text-gray-600" *ngIf="!copied">
+                    <path fill-rule="evenodd"
+                        d="M10.986 3H12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h1.014A2.25 2.25 0 0 1 7.25 1h1.5a2.25 2.25 0 0 1 2.236 2ZM9.5 4v-.75a.75.75 0 0 0-.75-.75h-1.5a.75.75 0 0 0-.75.75V4h3Z"
+                        clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                    class="w-3 h-3 text-gray-600" *ngIf="copied">
+                    <path fill-rule="evenodd"
+                        d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
+</div>
