@@ -31,7 +31,7 @@ export class SessionComponent {
 
   public processing: boolean = false;
 
-  public model: 'llama3-7b-8192' | 'llama3-70b-8192' = 'llama3-70b-8192';
+  public model: 'llama3-8b-8192' | 'llama3-70b-8192' = 'llama3-70b-8192';
   public messages: Message[] = [];
 
   public firstTokenArrived: boolean = false;

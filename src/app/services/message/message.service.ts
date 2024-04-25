@@ -33,7 +33,7 @@ export class MessageService {
 
   constructor() { }
 
-  public stream(messages: Array<Message>, model: 'llama3-7b-8192' | 'llama3-70b-8192'): Observable<Message> {
+  public stream(messages: Array<Message>, model: 'llama3-8b-8192' | 'llama3-70b-8192'): Observable<Message> {
     const message: Message = {
       id: uuidv4(),
       date: this.getCurrentUtcTimestamp(),

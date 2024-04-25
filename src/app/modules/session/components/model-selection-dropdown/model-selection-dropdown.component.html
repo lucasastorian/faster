@@ -6,7 +6,7 @@
             d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
             clip-rule="evenodd" />
     </svg>
-    <span *ngIf="model == 'llama3-7b-8192'">Llama 7B</span>
+    <span *ngIf="model == 'llama3-8b-8192'">Llama 8B</span>
     <span *ngIf="model == 'llama3-70b-8192'">Llama 70B</span>
     <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd"
@@ -20,7 +20,7 @@
     [class.scale-100]="dropdownOpen" *ngIf="dropdownOpen" role="menu" aria-orientation="vertical"
     aria-labelledby="menu-button" tabindex="-1">
     <ul class="w-full h-full rounded-md">
-        <li (click)="modelChange.emit('llama3-7b-8192')"
+        <li (click)="modelChange.emit('llama3-8b-8192')"
             class="inline-flex justify-start items-center px-4 py-2 space-x-2 bg-white hover:bg-gray-50 cursor-pointer w-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                 class="w-5 h-5 text-green-500">
@@ -29,7 +29,7 @@
             </svg>
 
             <div>
-                <h2 class="font-base text-base">Llama 7B</h2>
+                <h2 class="font-base text-base">Llama 8B</h2>
                 <p class="text-xs font-light">Ultra Fast. Low Quality</p>
             </div>
         </li>

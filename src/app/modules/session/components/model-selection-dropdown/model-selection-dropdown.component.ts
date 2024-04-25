@@ -13,8 +13,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, In
 export class ModelSelectionDropdownComponent {
 
   public dropdownOpen: boolean = false;
-  @Input() model: 'llama3-7b-8192' | 'llama3-70b-8192' = 'llama3-7b-8192';
-  @Output() modelChange: EventEmitter<'llama3-7b-8192' | 'llama3-70b-8192'> = new EventEmitter<'llama3-7b-8192' | 'llama3-70b-8192'>();
+  @Input() model: 'llama3-8b-8192' | 'llama3-70b-8192' = 'llama3-8b-8192';
+  @Output() modelChange: EventEmitter<'llama3-8b-8192' | 'llama3-70b-8192'> = new EventEmitter<'llama3-8b-8192' | 'llama3-70b-8192'>();
 
   constructor(private cdr: ChangeDetectorRef) {
 
