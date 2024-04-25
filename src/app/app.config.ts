@@ -7,6 +7,7 @@ import { MARKED_OPTIONS, MarkedOptions, MarkedRenderer, provideMarkdown } from '
 import { provideTippyConfig, tooltipVariation, popperVariation } from '@ngneat/helipopper';
 import { provideHighlightOptions } from 'ngx-highlightjs';
 import { DomSanitizer } from '@angular/platform-browser';
+import { escapeCode } from './utils';
 
 function markedOptionsFactory(injector: Injector): MarkedOptions {
   const sanitizer: DomSanitizer = injector.get(DomSanitizer);
@@ -69,7 +70,7 @@ function markedOptionsFactory(injector: Injector): MarkedOptions {
   renderer.code = (code: string, infostring: string | undefined, isEscaped: boolean) => {
     const id = Math.random().toString(36).substring(7);
     const encodedCode = encodeURIComponent(code);
-    const escapedCode = escape(code);
+    const escapedCode = escapeCode(code);
     return `
     <script>
     function test() {
