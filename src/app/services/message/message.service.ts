@@ -44,15 +44,6 @@ export class MessageService {
       updated_at: this.getCurrentUtcTimestamp()
     }
 
-    from(this.groq.chat.completions.create({ messages: this._formatMessages(messages), model: model, temperature: this.temperature, stream: true })).subscribe({
-      next: (response: any) => {
-        console.log(response);
-      },
-      error: (error: any) => {
-        console.log(error);
-      }
-    });
-
     return new Observable<Message>(subscriber => {
       this.groq.chat.completions.create({
         messages: this._formatMessages(messages),
